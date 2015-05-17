@@ -1,0 +1,246 @@
+ <!DOCTYPE html>
+ <!--The language is English-->
+<html lang="en">
+<head>
+	 <!--Instruct the browser to use my intended character style-->
+	<meta charset="utf-8">
+	
+	 <!--Tell Internet Explorer to use the best engine it has and to give the user the most up-to-date experience-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	 <!--(For mobile displays) Instructions on how to display the webpage when it loads
+	 width=device-width => instructs the page to match the screen's width in DIPS (Device Independent PixelS) => reflow the content to match the screen's size
+	 initial-scale=1.0 => establish a 1:1 relationship between DIPS and CSS pixels
+	-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Sirajee Portfolio</title>
+
+	<!--Getting the desired font from Google Fonts-->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300">
+	
+	<!--Use Bootstrap and CSS-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<!--We need JavaScript for the modal-->
+	<script src="javascript/jquery-1.11.2.min.js"></script>
+	<script src="javascript/bootstrap.min.js"></script>
+</head>
+
+<!--Set the background of the webpage
+The following way of specifying the background image is not valid anymore and thus, we have to do it separately in the CSS file-->
+<!-- <body background="images/background2.jpeg"> -->
+<body>
+	<!--Our code (except the modal code) should all be placed inside Bootstrap's container div-->
+	<div class="container">
+		
+		<!--The top row with my company logo, my full name and job title-->
+		<header class="row">
+			<div class="col-md-5">
+				<img class="title-logo img-responsive" src="images/logo.png" alt="Investopedia - my company - logo">
+			</div>
+			<div class="col-md-7 text-right text-uppercase">
+				<h1><strong>Mohammad M.B. Sirajee</strong></h1>
+				<h2 class="text-thin">Junior Web Developer</h2>
+			</div>
+		</header>
+		
+		<!--A horizontal rule divider-->
+		<div class="row">
+			<div class="col-md-12">
+				<hr>
+			</div>
+		</div>
+		
+		<!--A big central image-->
+		<div class="row">
+			<div class="col-md-12">
+				<img class="img-responsive center-block" src="images/Big_picture2.jpg" alt="Main central 'geeky' image">
+				<!--Alternate central image
+				<img class="img-responsive center-block" src="images/binary.jpg" alt="Main central 'geeky' image">
+				-->
+			</div>
+		</div>
+		
+		<!--The row with a link to my resume-->
+		<section class="row">
+			<div class="col-md-12">
+				<h3><a href="https://dl.dropboxusercontent.com/u/133690147/Mohammad_Sirajee_Biomedical_Resume.pdf" target="_blank">My Resume</a></h3>
+			</div>
+		</section>
+
+		<!--The row declaring that the following rows contain information about my previous works/projects-->
+		<section class="row">
+			<div class="col-md-12">
+				<h3 class="text-muted">My Earlier Works</h3>
+			</div>
+		</section>
+
+		<!--First row of my work-->
+		<section class="row text-center">
+			<div class="col-md-4">
+				<img class="img-responsive center-block" src="images/asteroids.png" alt="Work 1: Python Games - 1st set" data-toggle="modal" data-target="#work1">
+				<h4>Python Games 1</h4>
+				<p><a href="https://github.com/muntasir2165/IIPP_gaming_projects" target="_blank">GitHub Link</a></p>
+			</div>
+
+			<div class="col-md-4">
+				<img class="img-responsive center-block" src="images/tictactoe.png" alt="Work 2: Python Games - 2nd set" data-toggle="modal" data-target="#work2">
+				<h4>Python Games 2</h4>
+				<p><a href="https://github.com/muntasir2165/PoC_Game_Projects" target="_blank">GitHub Link</a></p>
+			</div>
+
+			<div class="col-md-4">
+				<img class="img-responsive center-block" src="images/java.jpg" alt="Work 3: Java Projects and Games" data-toggle="modal" data-target="#work3">
+				<h4>Java Projects/Games</h4>
+				<p><a href="https://github.com/muntasir2165/Java-Projects-and-Games" target="_blank">GitHub Link</a></p>
+			</div>
+		</section>
+
+		<!--Second row of my work-->
+		<section class="row text-center">
+			<div class="col-md-4">
+				<img class="img-responsive center-block" src="images/python.jpg" alt="Work 4: More Python Projects and Games" data-toggle="modal" data-target="#work4">
+				<h4>More Python Projects/Games</h4>
+				<p><a href="https://github.com/muntasir2165/Python-Projects-and-Games" target="_blank">GitHub Link</a></p>
+			</div>
+
+			<div class="col-md-4">
+				<img class="img-responsive center-block" src="images/web.jpg" alt="Work 5: Web Development Projects" data-toggle="modal" data-target="#work5">
+				<h4>Web Development</h4>
+				<p><a href="https://github.com/muntasir2165/Web-Development" target="_blank">GitHub Link</a></p>
+			</div>
+
+			<div class="col-md-4">
+				<img class="img-responsive center-block" src="images/loading2.gif" alt="Work 6: To Be Determined..." data-toggle="modal" data-target="#work6">
+				<h4>More Stuffs Coming Soon!</h4>
+			</div>
+		</section>
+	</div>
+
+	<!--The following are the code for the modals-->
+	<!--Modal for Work 1-->
+	<div class="modal fade text-center modal-text" id="work1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="myModalLabel1">Python Games - 1st set</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-responsive center-block" src="images/asteroids.png" alt="Work 1: Python Games - 1st set">
+	        <p>These are the projects that really got me hooked to Python. It's also this set of projects that I had my first taste of object-oriented programming. I made some very rudimentary games (in today's standards at least) like, Rock-Paper-Scissors, Guess The Number, Blackjack and the 80's classic Asteroids!</p>
+	        <p><a href="https://github.com/muntasir2165/IIPP_gaming_projects" target="_blank">GitHub Link</a></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!--Modal for Work 2-->
+	<div class="modal fade text-center modal-text" id="work2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="myModalLabel2">Python Games - 2nd set</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-responsive center-block" src="images/tictactoe.png" alt="Work 2: Python Games - 2nd set">
+	        <p>This is like a step up from the Python games I made earlier. While implementing these games, I had a thorough introduction to some basic algorithms and I really enjoyed seeing them bring life to these games. In the collection are games like 2048 (I only implemented the game logic), Cookie Clicker, Tic-Tac-Toe (a Monte Carlo and a Minimax version), Yahtzee and Word Wrangler.</p>
+	        <p><a href="https://github.com/muntasir2165/PoC_Game_Projects" target="_blank">GitHub Link</a></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!--Modal for Work 3-->
+	<div class="modal fade text-center modal-text" id="work3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="myModalLabel3">Java Projects and Games</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-responsive center-block" src="images/java.jpg" alt="Work 3: Java Projects and Games">
+	        <p>My Java projects and games.</p>
+	        <p><a href="https://github.com/muntasir2165/Java-Projects-and-Games" target="_blank">GitHub Link</a></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!--Modal for Work 4-->
+	<div class="modal fade text-center modal-text" id="work4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="myModalLabel4">More Python Projects and Games</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-responsive center-block" src="images/python.jpg" alt="Work 4: More Python Projects and Games">
+	        <p>Another set of Python games that is heavily based on object-oriented programming.</p>
+	        <p><a href="https://github.com/muntasir2165/Python-Projects-and-Games" target="_blank">GitHub Link</a></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!--Modal for Work 5-->
+	<div class="modal fade text-center modal-text" id="work5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="myModalLabel5">Web Development Projects</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-responsive center-block" src="images/web.jpg" alt="Work 5: Web Development Projects">
+	        <p>My work on website creation and optimization using HTML, CSS and JavaScript. These projects heavily rely on the Twitter Bootstrap framework to give my work the touch of awesomeness!</p>
+	        <p><a href="https://github.com/muntasir2165/Web-Development" target="_blank">GitHub Link</a></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!--Modal for Work 6-->
+	<div class="modal fade text-center modal-text" id="work6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="myModalLabel6">Future Projects</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-responsive center-block" src="images/patience.jpeg" alt="Work 6: To Be Determined...">
+	        <p>More stuffs are coming! I promise...</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- To show your readers that you've taken the care to create an interoperable Web page, you may display this icon on any page that validates. Here is the XHTML you could use to add this icon to your Web page: -->
+	<footer>
+		<p>
+		    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+		        <img class ="img-responsive" style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"/>
+		    </a>
+		</p>
+	</footer>
+
+</body>
+</html>

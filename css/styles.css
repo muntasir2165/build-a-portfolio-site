@@ -1,0 +1,116 @@
+/*We used the following style for debugging purposes
+when setting up the boxes for the webpage in the very 
+beginning
+* {
+    border: 1px solid red !important;
+}*/
+
+
+/*@media only screen and (max-width: 500px) {
+	p {
+		background-color: none;
+	}
+}*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+	font-weight: 300;
+
+    background: url(../images/background2.jpeg) center center no-repeat fixed #464646;
+
+    /*This is what makes the background image rescale based on the container's size
+    Use vendor prefixes to support different browsers*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+    /*The following code was originally copied from 
+    http://sixrevisions.com/css/responsive-background-image/*/
+    /*The following is the detailed version of the styling for the body tag*/
+    /* Location of the image */
+    /*background-image: url(../images/background2.jpeg);*/
+    
+    /* Background image is centered vertically and horizontally at all times */
+    /*background-position: center center;*/
+    
+    /* Background image doesn't tile */
+    /*background-repeat: no-repeat;*/
+    
+    /* Background image is fixed in the viewport so that it doesn't move when 
+       the content's height is greater than the image's height */
+    /*background-attachment: fixed;*/
+    
+    /* This is what makes the background image rescale based
+       on the container's size */
+    /*background-size: cover;*/
+    
+    /* Set a background color that will be displayed
+       while the background image is loading or is non-existent */
+    /*background-color: #464646;*/
+}
+
+
+.text-muted {
+    color: #bcbbbb;
+}
+
+.text-thin {
+	font-weight: 100;
+}
+
+.title-logo {
+	margin-top: 20px;
+}
+
+.modal-text {
+	color: black;
+}
+
+/*Please note that the following code for hr (horizontal rule) was pretty much copied from the internet 
+(http://stackoverflow.com/questions/4151743/how-i-change-the-thickness-of-my-hr-tag)*/
+hr {
+	border: none;
+	height: 2px;
+	/* Set the hr color */
+	background-color: #bcbbbb; /* Modern Browsers */
+}
+
+/*The following is the detailed version of the styling for the body tag*/
+/*body {*/
+  /*font-family: 'Lato', sans-serif;*/
+  /*color: #fff;*/
+  /*font-weight: 300;*/
+
+  /*The following code was copied from 
+  http://sixrevisions.com/css/responsive-background-image/*/
+  /* Location of the image */
+  /*background-image: url(../images/background2.jpeg);*/
+  
+  /* Background image is centered vertically and horizontally at all times */
+  /*background-position: center center;*/
+  
+  /* Background image doesn't tile */
+  /*background-repeat: no-repeat;*/
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  /*background-attachment: fixed;*/
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  /*background-size: cover;*/
+  
+  /* Set a background color that will be displayed
+     while the background image is loading or is non-existent */
+  /*background-color: #464646;*/
+/*}
